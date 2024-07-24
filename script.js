@@ -1,7 +1,8 @@
 let order = {
     language: null,
     mealType: null,
-    meal: null
+    meal: null,
+    price: null
 };
 
 function showStep(stepId) {
@@ -21,11 +22,13 @@ function selectMealType(mealType) {
     showStep('meal-selection');
 }
 
-function selectMeal(meal) {
+function selectMeal(meal, price) {
     order.meal = meal;
+    order.price = price;
     document.getElementById('order-summary').innerText = `
         Meal Type: ${order.mealType}
         Meal: ${order.meal}
+        Price: $${order.price.toFixed(2)}
     `;
     showStep('confirmation');
 }
@@ -42,7 +45,8 @@ function restart() {
     order = {
         language: null,
         mealType: null,
-        meal: null
+        meal: null,
+        price: null
     };
     showStep('language-selection');
 }

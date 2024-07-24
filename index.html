@@ -11,72 +11,72 @@
         <header>
             <img src="images/logo.png" alt="Logo" class="logo">
         </header>
-        
+
         <!-- Language Selection Page -->
         <section id="language-selection" class="page active">
-            <h1>Choose Your Language</h1>
+            <h1>Select Your Language</h1>
             <button onclick="selectLanguage('English')">English</button>
             <button onclick="selectLanguage('Spanish')">Spanish</button>
         </section>
-        
+
         <!-- Meal Type Selection Page -->
         <section id="meal-type-selection" class="page">
             <h1>Take In or Take Away?</h1>
             <button onclick="selectMealType('take-in')">Take In</button>
             <button onclick="selectMealType('take-away')">Take Away</button>
         </section>
-        
+
         <!-- Meal Selection Page -->
         <section id="meal-selection" class="page">
             <h1>Select Your Meal</h1>
             <div class="menu">
-                <div class="menu-item" onclick="selectMeal('Burger')">
+                <div class="menu-item" onclick="selectMeal('Burger', 5.99)">
                     <img src="images/burger.jpg" alt="Burger">
                     <h3>Burger</h3>
                     <p>$5.99</p>
                 </div>
-                <div class="menu-item" onclick="selectMeal('Pizza')">
+                <div class="menu-item" onclick="selectMeal('Pizza', 8.99)">
                     <img src="images/pizza.jpg" alt="Pizza">
                     <h3>Pizza</h3>
                     <p>$8.99</p>
                 </div>
-                <div class="menu-item" onclick="selectMeal('Salad')">
+                <div class="menu-item" onclick="selectMeal('Salad', 4.99)">
                     <img src="images/salad.jpg" alt="Salad">
                     <h3>Salad</h3>
                     <p>$4.99</p>
                 </div>
-                <div class="menu-item" onclick="selectMeal('Pasta')">
+                <div class="menu-item" onclick="selectMeal('Pasta', 6.99)">
                     <img src="images/pasta.jpg" alt="Pasta">
                     <h3>Pasta</h3>
                     <p>$6.99</p>
                 </div>
-                <div class="menu-item" onclick="selectMeal('Sandwich')">
+                <div class="menu-item" onclick="selectMeal('Sandwich', 5.49)">
                     <img src="images/sandwich.jpg" alt="Sandwich">
                     <h3>Sandwich</h3>
                     <p>$5.49</p>
                 </div>
-                <div class="menu-item" onclick="selectMeal('Drink')">
+                <div class="menu-item" onclick="selectMeal('Drink', 1.99)">
                     <img src="images/drink.jpg" alt="Drink">
                     <h3>Drink</h3>
                     <p>$1.99</p>
                 </div>
             </div>
         </section>
-        
+
         <!-- Order Confirmation Page -->
         <section id="confirmation" class="page">
             <h1>Confirm Your Order</h1>
             <p id="order-summary"></p>
             <button onclick="confirmOrder()">Confirm</button>
         </section>
-        
+
         <!-- Payment Page -->
         <section id="payment" class="page">
             <h1>Payment</h1>
             <img src="images/pay-machine.jpg" alt="Pay Machine" class="payment-image">
             <button onclick="proceedToPayment()">Pay Now</button>
         </section>
-        
+
         <!-- Receipt Page -->
         <section id="receipt" class="page">
             <h1>Receipt</h1>
