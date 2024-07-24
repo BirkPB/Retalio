@@ -7,9 +7,39 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the POS System</h1>
-    <button id="showItems">Show Items</button>
-    <div id="items"></div>
+    <div class="container">
+        <div id="language-selection" class="step">
+            <h2>Select Language</h2>
+            <button onclick="selectLanguage('English')">English</button>
+            <button onclick="selectLanguage('Spanish')">Spanish</button>
+        </div>
+        <div id="meal-type-selection" class="step hidden">
+            <h2>Take In or Take Away?</h2>
+            <button onclick="selectMealType('take-in')">Take In</button>
+            <button onclick="selectMealType('take-away')">Take Away</button>
+        </div>
+        <div id="meal-selection" class="step hidden">
+            <h2>Select Your Meal</h2>
+            <button onclick="selectMeal('Burger')">Burger</button>
+            <button onclick="selectMeal('Pizza')">Pizza</button>
+            <button onclick="selectMeal('Salad')">Salad</button>
+        </div>
+        <div id="confirmation" class="step hidden">
+            <h2>Confirm Your Order</h2>
+            <p id="order-summary"></p>
+            <button onclick="confirmOrder()">Confirm</button>
+        </div>
+        <div id="payment" class="step hidden">
+            <h2>Payment</h2>
+            <img src="pay-machine.jpg" alt="Pay Machine" class="payment-image">
+            <button onclick="proceedToPayment()">Pay Now</button>
+        </div>
+        <div id="receipt" class="step hidden">
+            <h2>Receipt</h2>
+            <img src="receipt.jpg" alt="Receipt" class="receipt-image">
+            <button onclick="restart()">Start New Order</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
