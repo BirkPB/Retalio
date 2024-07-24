@@ -24,7 +24,6 @@ function selectMealType(mealType) {
 function selectMeal(meal) {
     order.meal = meal;
     document.getElementById('order-summary').innerText = `
-        Language: ${order.language}
         Meal Type: ${order.mealType}
         Meal: ${order.meal}
     `;
