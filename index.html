@@ -3,42 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POS System</title>
+    <title>Kiosk POS System</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div id="language-selection" class="step">
-            <h2>Select Language</h2>
+        <section id="language-selection" class="page active">
+            <h1>Choose Your Language</h1>
             <button onclick="selectLanguage('English')">English</button>
             <button onclick="selectLanguage('Spanish')">Spanish</button>
-        </div>
-        <div id="meal-type-selection" class="step hidden">
-            <h2>Take In or Take Away?</h2>
+        </section>
+        
+        <section id="meal-type-selection" class="page">
+            <h1>Take In or Take Away?</h1>
             <button onclick="selectMealType('take-in')">Take In</button>
             <button onclick="selectMealType('take-away')">Take Away</button>
-        </div>
-        <div id="meal-selection" class="step hidden">
-            <h2>Select Your Meal</h2>
+        </section>
+        
+        <section id="meal-selection" class="page">
+            <h1>Select Your Meal</h1>
             <button onclick="selectMeal('Burger')">Burger</button>
             <button onclick="selectMeal('Pizza')">Pizza</button>
             <button onclick="selectMeal('Salad')">Salad</button>
-        </div>
-        <div id="confirmation" class="step hidden">
-            <h2>Confirm Your Order</h2>
+        </section>
+        
+        <section id="confirmation" class="page">
+            <h1>Confirm Your Order</h1>
             <p id="order-summary"></p>
             <button onclick="confirmOrder()">Confirm</button>
-        </div>
-        <div id="payment" class="step hidden">
-            <h2>Payment</h2>
+        </section>
+        
+        <section id="payment" class="page">
+            <h1>Payment</h1>
             <img src="pay-machine.jpg" alt="Pay Machine" class="payment-image">
             <button onclick="proceedToPayment()">Pay Now</button>
-        </div>
-        <div id="receipt" class="step hidden">
-            <h2>Receipt</h2>
+        </section>
+        
+        <section id="receipt" class="page">
+            <h1>Receipt</h1>
             <img src="receipt.jpg" alt="Receipt" class="receipt-image">
             <button onclick="restart()">Start New Order</button>
-        </div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>

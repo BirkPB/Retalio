@@ -5,10 +5,10 @@ let order = {
 };
 
 function showStep(stepId) {
-    document.querySelectorAll('.step').forEach(step => {
-        step.classList.add('hidden');
+    document.querySelectorAll('.page').forEach(page => {
+        page.classList.remove('active');
     });
-    document.getElementById(stepId).classList.remove('hidden');
+    document.getElementById(stepId).classList.add('active');
 }
 
 function selectLanguage(language) {
